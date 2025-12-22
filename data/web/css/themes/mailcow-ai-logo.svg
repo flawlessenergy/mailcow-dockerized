@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <!-- Background -->
+  <rect width="200" height="60" rx="10" fill="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"/>
+
+  <!-- Neural Network Nodes -->
+  <circle cx="40" cy="30" r="8" fill="#36d1dc" filter="url(#glow)"/>
+  <circle cx="80" cy="20" r="6" fill="#5b86e5"/>
+  <circle cx="80" cy="40" r="6" fill="#5b86e5"/>
+  <circle cx="120" cy="30" r="10" fill="#36d1dc" filter="url(#glow)"/>
+  <circle cx="160" cy="20" r="6" fill="#5b86e5"/>
+  <circle cx="160" cy="40" r="6" fill="#5b86e5"/>
+  <circle cx="180" cy="30" r="8" fill="#36d1dc" filter="url(#glow)"/>
+
+  <!-- Neural Connections -->
+  <path d="M40,30 Q60,15 80,20" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M40,30 Q60,45 80,40" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M80,20 Q100,10 120,30" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M80,40 Q100,50 120,30" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M120,30 Q140,15 160,20" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M120,30 Q140,45 160,40" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M160,20 L180,30" stroke="#ff4081" stroke-width="2" fill="none"/>
+  <path d="M160,40 L180,30" stroke="#ff4081" stroke-width="2" fill="none"/>
+
+  <!-- Mail Envelope -->
+  <path d="M185,10 L195,15 L185,20 Z" fill="#ffffff"/>
+  <rect x="185" y="10" width="10" height="10" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Text -->
+  <text x="100" y="50" fill="white" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">
+    Mailcow AI
+  </text>
+
+  <!-- Glow Effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

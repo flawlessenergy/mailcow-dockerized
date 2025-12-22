@@ -1,0 +1,61 @@
+/* AI Neural Network Icon Overrides */
+.navbar-brand img {
+  filter: drop-shadow(0 4px 8px rgba(54, 209, 220, 0.3));
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  filter: drop-shadow(0 6px 12px rgba(54, 209, 220, 0.5));
+  transform: scale(1.05);
+}
+
+/* Replace default icons with AI-themed ones */
+.fa-envelope:before {
+  content: "🧠";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.fa-server:before {
+  content: "⚙️";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.fa-users:before {
+  content: "🤖";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.fa-cog:before {
+  content: "🔧";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.fa-shield-alt:before {
+  content: "🛡️";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.fa-chart-bar:before {
+  content: "📈";
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+/* AI-themed status indicators */
+.status-indicator-ai {
+  background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+  border-radius: 50%;
+  animation: pulse-ai 2s infinite;
+}
+
+@keyframes pulse-ai {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Neural network background pattern */
+.ai-bg-pattern {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(54, 209, 220, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(91, 134, 229, 0.1) 2px, transparent 2px);
+  background-size: 40px 40px;
+}
