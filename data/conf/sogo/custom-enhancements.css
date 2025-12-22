@@ -1,0 +1,270 @@
+/* =============================================
+   MODERN SOGo ENHANCEMENTS - Complete UI Overhaul
+   ============================================= */
+
+/* 1. Import Modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap');
+
+/* 2. Global Typography */
+body, .md-button, .md-toolbar-tools, .md-list-item-text,
+.md-title, .md-input, .login-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Monospace for code/pre elements */
+pre, code, .monospace {
+  font-family: 'Roboto Mono', 'SF Mono', Monaco, monospace !important;
+}
+
+/* 3. Smooth Animations & Transitions */
+* {
+  transition-property: background-color, border-color, color, transform, opacity, box-shadow !important;
+  transition-duration: 0.25s !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 4. Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #03a9f4, #0288d1);
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #40c4ff, #03a9f4);
+}
+
+/* 5. Card & Panel Enhancements */
+.md-card, .md-dialog, .md-panel {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 6. Button Styles */
+.md-button {
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  padding: 8px 20px !important;
+}
+
+.md-button.md-raised:not([disabled]) {
+  box-shadow: 0 4px 12px rgba(3, 169, 244, 0.3) !important;
+}
+
+.md-button.md-raised:not([disabled]):hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(3, 169, 244, 0.4) !important;
+}
+
+/* 7. Mail List Items */
+.md-list-item {
+  border-left: 3px solid transparent !important;
+  border-radius: 4px !important;
+  margin: 2px 4px !important;
+}
+
+.md-list-item:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left-color: #03a9f4 !important;
+  transform: translateX(4px) !important;
+}
+
+.md-list-item.md-selected {
+  background: linear-gradient(90deg, rgba(3, 169, 244, 0.2), rgba(3, 169, 244, 0.1)) !important;
+  border-left-color: #03a9f4 !important;
+}
+
+/* 8. Input Field Styles */
+.md-input {
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.md-input:focus {
+  border-color: #03a9f4 !important;
+  box-shadow: 0 0 0 3px rgba(3, 169, 244, 0.2) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 9. Login Page Redesign */
+.login-container {
+  animation: fadeInUp 0.6s ease-out !important;
+  background: linear-gradient(135deg, #263238 0%, #37474f 100%) !important;
+  border-radius: 20px !important;
+  padding: 40px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+}
+
+.login-title {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #40c4ff, #03a9f4) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin-bottom: 30px !important;
+}
+
+/* 10. Loading Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite !important;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.06) 75%) !important;
+  background-size: 1000px 100% !important;
+  animation: shimmer 2s infinite linear !important;
+}
+
+/* 11. Navigation Sidebar */
+.sogo-sidebar {
+  background: linear-gradient(180deg, #263238, #1a2328) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.sogo-sidebar .md-button {
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+  text-align: left !important;
+}
+
+.sogo-sidebar .md-button:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateX(4px) !important;
+}
+
+/* 12. Badges & Notifications */
+.badge {
+  background: linear-gradient(135deg, #ff4081, #f50057) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  animation: pulse 2s infinite !important;
+}
+
+/* 13. Calendar Enhancements */
+.calendar-event {
+  border-radius: 6px !important;
+  border-left: 4px solid #03a9f4 !important;
+  margin: 2px 0 !important;
+  padding: 8px !important;
+}
+
+.calendar-today {
+  background: linear-gradient(135deg, rgba(3, 169, 244, 0.2), rgba(3, 169, 244, 0.1)) !important;
+  border-radius: 50% !important;
+}
+
+/* 14. Responsive Improvements */
+@media (max-width: 768px) {
+  .md-toolbar-tools h2 {
+    font-size: 18px !important;
+  }
+
+  .md-button {
+    padding: 6px 12px !important;
+    min-width: auto !important;
+  }
+}
+
+/* 15. Focus States */
+:focus {
+  outline: 2px solid #03a9f4 !important;
+  outline-offset: 2px !important;
+}
+
+/* 16. Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 17. Table Improvements */
+.md-table {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.md-table th {
+  background: rgba(255, 255, 255, 0.05) !important;
+  font-weight: 600 !important;
+}
+
+.md-table tr:hover {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* 18. Tooltip Enhancements */
+.md-tooltip {
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* 19. Custom Checkboxes & Radios */
+.md-checkbox .md-container {
+  border-radius: 4px !important;
+}
+
+.md-checkbox.md-checked .md-container {
+  background: #03a9f4 !important;
+}
+
+/* 20. Email Viewer Improvements */
+.email-content {
+  line-height: 1.8 !important;
+  font-size: 15px !important;
+}
+
+.email-content blockquote {
+  border-left: 4px solid #03a9f4 !important;
+  padding-left: 16px !important;
+  margin-left: 0 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
